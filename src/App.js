@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { Product } from "./component/Product";
+import data from './data';
+import { useState } from "react";
+import { RefreshPage } from "./component/RefreshPage";
 
 function App() {
+
+  const [tours, setTours] = useState(data);
+
+  function removeCardHandler (id) {
+    const newData = tours.filter((e) => e.id !== id);
+    setTours(newData);
+  }
+
+  function refreshHandler () {
+    setTours(data);
+  }
+
+  if(tours.length === 0) {
+    return <RefreshPage refreshHandler = {refreshHandler}></RefreshPage>
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Product temp = {tours} removeCardHandler = {removeCardHandler}></Product>
   );
 }
 
