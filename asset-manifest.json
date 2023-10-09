@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Plan-With-Sajid/static/css/main.38d3f7b3.css",
+    "main.js": "/Plan-With-Sajid/static/js/main.86065fe7.js",
+    "index.html": "/Plan-With-Sajid/index.html",
+    "main.38d3f7b3.css.map": "/Plan-With-Sajid/static/css/main.38d3f7b3.css.map",
+    "main.86065fe7.js.map": "/Plan-With-Sajid/static/js/main.86065fe7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.38d3f7b3.css",
+    "static/js/main.86065fe7.js"
+  ]
+}
